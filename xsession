@@ -6,5 +6,13 @@ export ENV=$HOME/.kshrc
 
 picom &
 feh --bg-scale $HOME/Wallpaper/Wallpaper.png
-sh $HOME/src/dwm-scripts/statusBar.sh &
+
+#Get Status Bar RuNning
+pkill -f clock.sh
+pkill -f battery.sh
+touch /tmp/battery_chargeStatus
+touch /tmp/clock_currentTime
+sh $HOME/src/dwm-scripts/statusBar/battery.sh &
+sh $HOME/src/dwm-scripts/statusBar/clock.sh &
+
 exec dwm
