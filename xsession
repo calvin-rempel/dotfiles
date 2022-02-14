@@ -10,6 +10,6 @@ feh --bg-scale $HOME/Wallpaper/Wallpaper.png
 #Get Status Bar Running
 pkill -f statusBar.sh
 echo "us" > /tmp/lang_selected
-sh $HOME/src/dwm-scripts/stausBar.sh runLoops &
+sh $HOME/src/dwm-scripts/statusBar.sh runLoops &
 
 exec dwm
